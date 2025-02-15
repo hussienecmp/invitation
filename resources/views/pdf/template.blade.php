@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+
     <style>
             @font-face {
             font-family: 'Cairo';
@@ -56,10 +57,13 @@
             margin-bottom: 1rem;
             display: grid;
             grid-template-columns: 85% 15%;
+            text-align:center;
+            
         }
-        .name-cat-com p {
-            margin: 0;
+        .name-cat-com p{
+            padding-bottom: 20px;
         }
+      
     
         .half-circle-green {
            
@@ -75,7 +79,7 @@
         }
         .name {
             color: #4d5fa7;
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: 500;
         }
         .name-add, .category-add {
@@ -106,14 +110,14 @@
                 </div>
                 <div class="name-cat-com">
                    <div>
-                    <p class="name">الاسم</p>
-                    <p>{{ $name }}</p>
-                    <p class="category">الفئة</p>
-                    <p class="company">اسم المؤسسة: (اختياري)</p>
+                
+                    <p class="name">{{ $name }}</p>
+                    <p class="category">{{$cat}}</p>
+                    <p class="company">{{ $org?? '' }}</p>
                   </div>
                   <div ><img src="{{ public_path('images/blue.png') }}" /></div>
                 </div>
-                <div style="position: relative; height: 80px; border-bottom: 1px dashed #4c5fa8;">
+                <div style="position: relative; height: 20px; border-bottom: 1px dashed #4c5fa8;">
                     <div class="half-circle-green"><img src="{{ public_path('images/green.png') }}" />
                 </div>
                 </div>
